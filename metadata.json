@@ -1,0 +1,6 @@
+{
+  "name": "生產與材料管理系統",
+  "description": "一個全功能的生產計畫與材料庫存管理系統。包含物料清單(BOM)設計、AI 智慧配料與需求估算、庫存動態監控、生產工單與排程追蹤，並整合 Gemini 進行庫存健康診斷與生產優化建議。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

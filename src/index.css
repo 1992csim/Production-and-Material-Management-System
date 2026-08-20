@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --text-xs: 14px;
+  --text-sm: 15.5px;
+  --text-base: 17.5px;
+  --text-lg: 19.5px;
+  --text-xl: 22px;
+  --text-2xl: 26px;
+  --text-3xl: 32px;
+  --text-4xl: 38px;
+}
+
+/* Custom fine-grain animations and helpers */
+@keyframes spin-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+.text-xxs {
+  font-size: 13px;
+}
+
+.text-xxs-lh {
+  font-size: 13px;
+  line-height: 17px;
+}
+
+.text-xxs-mono {
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+
+/* Print Overrides */
+@media print {
+  /* Hide standard page elements */
+  body {
+    background-color: white !important;
+    background-image: none !important;
+    color: black !important;
+  }
+
+  header, footer, nav, aside, button, .no-print {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  /* Ensure main container is not hidden during print */
+  main, #app {
+    display: block !important;
+    visibility: visible !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Make print-only elements visible and styled correctly */
+  .print-only {
+    display: block !important;
+    visibility: visible !important;
+    width: 100% !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    margin: 0 !important;
+    padding: 10px !important;
+    color: #000000 !important;
+    background: #ffffff !important;
+  }
+}
+
+/* Hide print-only element during screen view */
+@media screen {
+  .print-only {
+    display: none !important;
+  }
+}
+
