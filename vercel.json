@@ -1,8 +1,7 @@
 {
+  "version": 2,
   "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/server.ts"
-    }
+    { "source": "/api/(.*)", "destination": "/dist/server.cjs" },
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
